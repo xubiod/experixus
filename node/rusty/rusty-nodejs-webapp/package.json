@@ -1,0 +1,12 @@
+{
+  "name": "rusty-nodejs-webapp",
+  "version": "0.0.0",
+  "description": "rusty-nodejs-webapp",
+  "main": "server.js",
+  "author": {
+    "name": "test"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
