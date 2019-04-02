@@ -1,0 +1,42 @@
+* {
+  font-family: sans-serif;
+}
+
+body, input, button, select {
+  background-color: #130029;
+  color: #dcbdff;
+}
+
+input, button, select, option {
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 2px;
+  margin: 2px;
+  border-radius: 8px;
+  transition: all 0.25s;
+}
+
+input:hover, button:not([disabled]):hover, select:hover, option:hover {
+  background-color: #dcbdff;
+  color: #130029;
+  cursor: pointer;
+}
+
+*[disabled] {
+  background-color: black;
+  color: darkgray;
+}
+
+canvas {
+  border-style: solid;
+  border-width: 1px;
+}
+
+span#str {
+  font-weight: bolder;
+}
+
+#preview {
+  width: 98vw;
+}
+

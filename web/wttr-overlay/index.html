@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>wttr-overlay</title>
+
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="index.js"></script>
+</head>
+
+<body onload="start()">
+    hover over every option to get a description.<br><br>
+    <input type="text" id="tallness" placeholder="height" style="width:50px" title="the height of the image. can be skipped if a preset is provided via the dropdown." />
+    <input type="text" id="wideness" placeholder="width" style="width:50px" title="the width of the image. can be skipped if a preset is provided via the dropdown." />
+    <input type="number" id="seethruness" placeholder="transparency" min="0" max="255" style="width:90px" title="defines the transparency of the weather/moon phase overlay. if nothing is provided 150 is supplied." />
+
+    <select id="res_select" title="default resolution selector. use this if you don't feel like typing your res, as most common ones are here.">
+        <option value="userdef">no preset</option>
+        <option value="640,360">640 x 360 (nHD, 16:9)</option>
+        <option value="800,600">800 x 600 (SVGA, 4:3)</option>
+        <option value="1024,768" >1024 x 768 (XGA, 4:3)</option>
+        <option value="1280,720" >1280 x 720 (WXGA, 16:9)</option>
+        <option value="1280,800" >1280 x 800 (WXGA, 16:10)</option>
+        <option value="1280,1024">1280 x 1024 (SXGA, 5:4)</option>
+        <option value="1360,768" >1360 x 768 (HD, ~16:9)</option>
+        <option value="1366,768" >1366 x 768 (HD, ~16:9)</option>
+        <option value="1440,900" >1440 x 900 (WXGA+, 16:10)</option>
+        <option value="1920,1080">1920 x 1080 (FHD, 16:9)</option>
+        <option value="1920,1200">1920 x 1200 (WUXGA, 16:10)</option>
+        <option value="2048,1152">2048 x 1152 (QWXGA, 16:9)</option>
+        <option value="2560,1440">2560 x 1440 (QHD, 16:9)</option>
+        <option value="3840,2160">3840 x 2160 (4K UHD, 16:9)</option>
+    </select>
+
+    <input type="checkbox" onchange="_preview()" /> preview
+
+    <br>
+    <select id="locale" title="this defines the locale supplied to wttr.in.">
+        <option value="ja">japanese</option>
+        <option value="en">english</option>
+        <option value="es">spanish</option>
+        <option value="fr">french</option>
+        <option value="ru">russian</option>
+    </select>
+
+    <select id="overlay-mode" title="defines the overlay. can be current weather for your location or current moonphase.">
+        <option value="weather">weather</option>
+        <option value="moon">moon-phase</option>
+    </select>
+
+    <select id="thicky-ness" title="defines if the overlay is narrow.">
+        <option value="n">narrow</option>
+        <option value="">wide</option>
+    </select>
+
+    <select id="unit" title="defines the unit wind speeds are. USCS is for the united states.">
+        <option value="m">metric</option>
+        <option value="u">USCS</option>
+    </select>
+
+    <select id="provider" title="defines what placeholder site to use as a background. each one has a differnet set of images so experimenting is encouraged. any disadvantages to each are shown as tooltips.">
+        <option value="0" title="after generating once, it tends to send the same picture. can be fixed by using another site and going back. doesn't accept tags.">lorem picsum</option>
+        <option value="1" title="tends to have people in them without a tag. also has limited catergories.">lorempixel</option>
+        <option value="2" title="without a tag this site only returns kittens. also does not send images with more than 1280 pixels on one side (SXGA or below.)">loremflickr</option>
+        <option value="3" title="requires a tag or 'any' to be supplied.">placeimg</option>
+    </select>
+
+    <input type="text" id="tags" placeholder="background tags" style="width:100px" title="gives a parameter to the site for getting a specific image. not all sites support this." />
+
+    <button onclick="generate()" title="creates the image.">generate</button>
+    <button onclick="update()" title="updates the overlay while not changing the background. useful if you find a background you like.">update</button>
+    <button download="result.png" onclick="save()" title="downloads the canvas as an image." disabled>save</button>
+    <br>
+    <br>
+    <div><canvas id="result" title="here's where the result shows up. right click to save as an image."></canvas></div>
+</body>
+
+</html>
