@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>MAZE</title>
+
+    <link rel="stylesheet" href="index.css" media="all">
+    <link rel="stylesheet" href="./themes/green.css" media="all" id="theme">
+    <script src="index.js"></script>
+</head>
+
+<body onkeydown="handleInput(event)" onload="menu = document.getElementById('field').innerHTML;noice.play();">
+    <div id="field">
+        : TOP MENU ::::::<br><br>
+        <a href="#" onclick="init()">START</a><br>
+        <a href="#" onclick="thememenu()">PICK THEME</a><br>
+        <a href="#" onclick="help()">HELP</a><br><br>
+        <a href="#" onclick="mapmaking()">MAPMAKING</a><br>
+        <a href="#" onclick="thememaking()">THEMEMAKING</a><br><br>
+        <a href="#" onclick="noice.pause()">60Hz OFF</a><br>
+        <a href="#" onclick="noice.play()">60Hz ON</a>
+    </div>
+</body>
+
+</html>

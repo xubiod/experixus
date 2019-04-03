@@ -1,0 +1,68 @@
+@keyframes flicker {
+    0% {
+        opacity: 1.0;
+    }
+    10% {
+        opacity: 1.0;
+        color: royalblue;
+    }
+    10.001% {
+        opacity: 0.5;
+        color: blue;
+    }
+    15% {
+        opacity: 1.0;
+    }
+    45% {
+        opacity: 1.0;
+        color: royalblue;
+        font-weight: 400;
+    }
+    45.001% {
+        opacity: 0.25;
+        font-weight: 900;
+    }
+    60% {
+        opacity: 1.0;
+    }
+    70% {
+        color: royalblue;
+    }
+    70.001% {
+        color: blue;
+    }
+    77.5% {
+        color: royalblue;
+        font-weight: 400;
+    }
+}
+
+html,
+body {
+    background-color: #000014;
+    color: royalblue;
+}
+
+a:hover {
+    text-shadow: 0px 0px 32pt royalblue;
+}
+
+#field {
+    box-shadow: 0px 0px 32pt #000044;
+    text-shadow: 0px 0px 32pt royalblue;
+}
+
+#player {
+    text-shadow: 0px 0px 32pt royalblue;
+}
+
+
+/*html,
+body {
+    background-color: #000000;
+    color: white;
+}
+
+a {
+    color: white;
+}*/

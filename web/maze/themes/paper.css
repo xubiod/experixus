@@ -1,0 +1,37 @@
+@keyframes flicker {
+    0% {
+        opacity: 1.0;
+    }
+}
+
+html,
+body {
+    background-color: wheat;
+    color: black;
+}
+
+a:hover {
+    text-shadow: 0px 0px 32pt black;
+    color: black;
+}
+
+#field {
+    box-shadow: 0px 0px 32pt #cacaca;
+    text-shadow: 0px 0px 32pt black;
+    background-color: white;
+}
+
+#player {
+    text-shadow: 0px 0px 32pt black;
+}
+
+
+/*html,
+body {
+    background-color: #000000;
+    color: white;
+}
+
+a {
+    color: white;
+}*/
