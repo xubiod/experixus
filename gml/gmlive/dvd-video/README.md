@@ -4,5 +4,7 @@
 
 This is an attempt to replicate the DVD logo moving around the screen. It counts corner hits, wall hits, and can do *a lot* at once.
 
-The count is dependent on the variable <code>amt</code> and can't exceed the value defined by <code>cap</code>.
+The count is dependent on the variable <code>amt</code> and can't exceed the value defined by <code>cap</code> in <code>main.gml</code>.
+
+The DVD video sprite is in <code>dvd-sprite.gml</code> and is encoded using data uris.
 </div>
